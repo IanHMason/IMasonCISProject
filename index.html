@@ -2,60 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ian Mason</title>
-  <link rel="stylesheet" href="styles2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pass the Bass</title>
+  <link rel="stylesheet" href="Project_2-1_styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Ian Mason</h1>
-    </header>
+  <header>
+    <h1>Pass the Bass</h1>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about2.html">About</a></li>
-        <li><a href="school.html">School</a></li>
-      </ul>
-    </nav>
-
+  <main>
     <section class="content">
-      <div class="main">
-        <p>
-          My name is Ian Mason and I recently completed a degree from El Camino College in CIS/Cyber Security. 
-          I had previously graduated from El Camino with a degree in History and Philosophy before continuing on 
-          to UCLA for a Bachelor's in both subjects. I am a father of 3, including a recent El Camino graduate. 
-          I have recently begun working with a non-profit music-related charity as their Operational Supervisor 
-          for Festivals and enjoy traveling the country for music festivals. I plan to continue taking classes at 
-          El Camino in anything computer related I can to continue learning more.
-        </p>
+      <div class="image-box">
+        <div class="carousel">
+          <div class="slide active">
+            <img src="pass-the-bass-Karl-Alvarez-The-Descendents-Dylan-Flynn.jpg" alt="Dylan with Karl Alvarez of the Descendents">
+            <div class="caption">Dylan with Karl Alvarez of the Descendents</div>
+          </div>
+          <div class="slide">
+            <img src="pass-the-bass-dylan-flynn-bassist.jpg" alt="Dylan Flynn of Pass the Bass">
+            <div class="caption">Dylan Flynn of Pass the Bass</div>
+          </div>
+          <div class="slide">
+            <img src="pass-the-bass-dylan-nofx-band-640x480.jpg" alt="Dylan with NOFX">
+            <div class="caption">Dylan with NOFX</div>
+          </div>
+          <div class="slide">
+            <img src="pass-the-bass-dylan-randy-bradbury-pennywise-640x480.jpg" alt="Randy Bradbury of Pennywise with Dylan's bass">
+            <div class="caption">Randy Bradbury of Pennywise with Dylan's bass</div>
+          </div>
+          <div class="slide">
+            <img src="Big-thanks-to-fender-pass-the-bass.jpg" alt="Thanks to Fender!">
+            <div class="caption">Thanks to Fender!</div>
+          </div>
 
-        <h2>In my free time</h2>
-        <ol>
-          <li>Play games or watch TV with my kids</li>
-          <li>Go see live music</li>
-          <li>Catch up on comic book and Star Wars related shows and comics!</li>
-        </ol>
-
-        <p>
-          Not sure what my favorite site would be but 
-          <a href="https://www.elcamino.edu/academics/online-education/canvas-students.php" target="_blank" rel="noopener">
-            Canvass
-          </a> 
-          would be one of the most used for me.
-        </p>
+          <button class="arrow left">&#10094;</button>
+          <button class="arrow right">&#10095;</button>
+        </div>
       </div>
 
-      <aside class="sidebar">
-        <h3>Contact</h3>
-        <p><a href="mailto:ian_mason@elcamino.edu">ian_mason@elcamino.edu</a></p>
-      </aside>
+      <div class="info-box">
+        <h2>Information Placeholder</h2>
+        <p>
+          Placeholder text for Pass the Bass information section. Add details
+          about the site here.
+        </p>
+      </div>
     </section>
 
-    <footer>
-      <p>Last Updated: 10/8/2025</p>
-      <p>Contact me: <a href="mailto:ian_mason@elcamino.edu">ian_mason@elcamino.edu</a></p>
-    </footer>
-  </div>
+    <nav class="button-container">
+      <a href="#" class="btn">
+        <span>Support!</span><br>
+        Store/Donations
+      </a>
+      <a href="#" class="btn">Pass the Bass News and Events</a>
+      <a href="#" class="btn">Pass the Bass in the News</a>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </nav>
+  </main>
+
+  <footer>
+    <h2>Find us Next at The Vans Warped Tour in Orlando Florida on 11/15/25 & 11/16/25!</h2>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.carousel .slide');
+    const prev = document.querySelector('.arrow.left');
+    const next = document.querySelector('.arrow.right');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
